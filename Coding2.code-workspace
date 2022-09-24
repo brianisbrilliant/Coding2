@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"name": "Coding2",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "C:\\Program Files\\Epic Games\\UE_5.0"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"files.associations": {
+			"string": "cpp",
+			"filesystem": "cpp",
+			"iosfwd": "cpp",
+			"xstring": "cpp"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	}
+}
