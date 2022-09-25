@@ -17,12 +17,12 @@ void AHuman::BeginPlay()
 	Super::BeginPlay();
 
 	// setup elements
-	Elements[0] = "Fire";
-	Elements[1] = "Ice";
-	Elements[2] = "Candy";
-	Elements[3] = "Fire";
+	// Elements[0] = "Fire";
+	// Elements[1] = "Ice";
+	// Elements[2] = "Candy";
+	// Elements[3] = "Fire";
 
-	PlayerName = "Bob";
+	// PlayerName = "Bob";
 
 	RandomizeHuman();		// calling the randomize human function
 	
@@ -49,6 +49,7 @@ void AHuman::RandomizeHuman() {
 	int RandElement = FMath::RandRange(0,3);
 	
 	// UE_LOG(LogTemp, Display, TEXT("Player is a(n) %s elemental."), Elements[RandElement]);
+	UE_LOG(LogTemp, Display, TEXT("Player is a(n) %s elemental."), *Elements[RandElement]);
 
 	Speed = FMath::RandRange(5.0, 25.0);
 
@@ -58,6 +59,11 @@ void AHuman::RandomizeHuman() {
 
 
 void AHuman::TakeDamage(AHuman* attacker) {
+
+	// if attacker is equal to null, don't do anything else.
+	if (!attacker) return;
+
+
 	UE_LOG(LogTemp, Display, TEXT("My attacker's name is %s"), *attacker->PlayerName);
 
 	float DmgMuliplier = DamageMultiplier(attacker->ElementalType);
