@@ -53,4 +53,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	float DamageMultiplier(int32 GivenElemType);
 
+	UFUNCTION(BlueprintCallable) float GetHealth() const;
+
+	UFUNCTION(BlueprintCallable)void SetHealth(const float By);
+
 };

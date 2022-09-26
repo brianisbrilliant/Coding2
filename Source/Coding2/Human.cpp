@@ -60,6 +60,8 @@ void AHuman::RandomizeHuman() {
 
 void AHuman::TakeDamage(AHuman* attacker) {
 
+	UE_LOG(LogTemp, Display, TEXT("At the top of TakeDamage()"));
+
 	// if attacker is equal to null, don't do anything else.
 	if (!attacker) return;
 
@@ -79,6 +81,9 @@ void AHuman::TakeDamage(AHuman* attacker) {
 }
 
 float AHuman::DamageMultiplier(int32 GivenElemType) {
+	UE_LOG(LogTemp, Display, TEXT("At the top of DamageMultiplier()"));
+
+
 	float Multiplier = 1;		//default value is no change.
 
 	Multiplier = FMath::RandRange(.5, 2.0);
@@ -101,4 +106,12 @@ float AHuman::DamageMultiplier(int32 GivenElemType) {
 
 
 	return Multiplier;
+}
+
+float AHuman::GetHealth() const {
+	return Health;
+}
+
+void AHuman::SetHealth(const float By) {
+	Health += By;
 }
