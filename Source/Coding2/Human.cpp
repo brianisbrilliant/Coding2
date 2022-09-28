@@ -59,11 +59,12 @@ void AHuman::RandomizeHuman() {
 
 
 void AHuman::TakeDamage(AHuman* attacker) {
+	// if attacker is equal to null, don't do anything else.
+	if (!attacker) return;
 
 	UE_LOG(LogTemp, Display, TEXT("At the top of TakeDamage()"));
 
-	// if attacker is equal to null, don't do anything else.
-	if (!attacker) return;
+	
 
 
 	UE_LOG(LogTemp, Display, TEXT("My attacker's name is %s"), *attacker->PlayerName);
