@@ -36,7 +36,7 @@ public:
 	UPROPERTY(EditAnywhere)
 	FString Elements[4];
 
-	UPROPERTY(BlueprintRewrite, VisibleAnywhere)		// this should let me use the variable in blueprints.
+	UPROPERTY(/*BlueprintRewrite, */VisibleAnywhere)		// this should let me use the variable in blueprints.
 	float Health = 10;
 
 	UPROPERTY(EditAnywhere)
@@ -55,6 +55,6 @@ public:
 
 	UFUNCTION(BlueprintCallable) float GetHealth() const;
 
-	UFUNCTION(BlueprintCallable)void SetHealth(const float By);
+	UFUNCTION(BlueprintCallable) void SetHealth(const float By);
 
 };
